@@ -1,5 +1,5 @@
 import XCTest
-@testable import TranslatorLib
+@testable import on_fly_translator
 
 class LoggerTests: XCTestCase {
     

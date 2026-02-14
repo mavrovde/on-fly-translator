@@ -99,7 +99,7 @@ public class InputMonitor {
          
          // Ensure we are hidden so the target app has focus
          DispatchQueue.main.async {
-             NSApp.hide(nil)
+             NSApplication.shared.hide(nil)
          }
          
          // 0. Try Accessibility API first (Cleanest method)

@@ -1,7 +1,7 @@
 #!/bin/bash
 cd "$(dirname "$0")"
 # Create App Bundle Structure
-APP_NAME="OnFlyTranslator"
+APP_NAME="on-fly-translator"
 BUNDLE_DIR="build/${APP_NAME}.app"
 CONTENTS_DIR="${BUNDLE_DIR}/Contents"
 MACOS_DIR="${CONTENTS_DIR}/MacOS"

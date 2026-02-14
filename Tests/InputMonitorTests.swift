@@ -1,5 +1,5 @@
 import XCTest
-@testable import TranslatorLib
+@testable import on_fly_translator
 import CoreGraphics
 
 class InputMonitorTests: XCTestCase {
@@ -48,5 +48,16 @@ class InputMonitorTests: XCTestCase {
         }
         
         waitForExpectations(timeout: 1.0, handler: nil)
+    }
+}
+
+class MockInputMonitorDelegate: InputMonitorDelegate {
+    var triggerCount = 0
+    var lastCapturedText: String?
+    
+    func triggerTranslation(for text: String, completion: @escaping (String?) -> Void) {
+        triggerCount += 1
+        lastCapturedText = text
+        completion("Translated: \(text)")
     }
 }
