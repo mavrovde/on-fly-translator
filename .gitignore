@@ -21,3 +21,6 @@ DerivedData/
 # Dependencies
 Packages/
 Package.resolved
+
+# Environment
+.env

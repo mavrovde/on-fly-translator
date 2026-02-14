@@ -98,7 +98,11 @@ public class GoogleGeminiService {
     }
 
     public func translate(text: String, from sourceLang: String, to targetLang: String, completion: @escaping (Result<String, TranslationError>) -> Void) {
-        let apiKey = UserDefaults.standard.string(forKey: "GeminiAPIKey") ?? ""
+        // Priority: 1. Environment Variable, 2. UserDefaults
+        let apiKey = ProcessInfo.processInfo.environment["GEMINI_API_KEY"] 
+                  ?? UserDefaults.standard.string(forKey: "GeminiAPIKey") 
+                  ?? ""
+        
         if apiKey.isEmpty {
             completion(.failure(.noAPIKey))
             return
