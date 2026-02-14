@@ -1,13 +1,13 @@
 #!/bin/bash
 
-APP_PATH="$(pwd)/TranslatorApp/build/TranslatorApp.app"
-BUNDLE_ID="com.user.TranslatorApp"
+APP_PATH="$(pwd)/OnFlyTranslator/build/OnFlyTranslator.app"
+BUNDLE_ID="com.user.OnFlyTranslator"
 
 echo "=== Automating Permission Setup ==="
 
 # 1. Kill App
 echo "1. Closing App..."
-pkill -9 TranslatorApp
+pkill -9 OnFlyTranslator
 
 # 2. Reset Permissions
 echo "2. Resetting Permissions for ${BUNDLE_ID}..."
@@ -26,7 +26,7 @@ open -R "${APP_PATH}"
 echo ""
 echo "!!! ACTION REQUIRED !!!"
 echo "---------------------------------------------------"
-echo "1. Drag 'TranslatorApp' from the FINDER window..."
+echo "1. Drag 'OnFlyTranslator' from the FINDER window..."
 echo "2. ...into the SYSTEM SETTINGS window list."
 echo "3. Make sure the toggle is ON."
 echo "---------------------------------------------------"

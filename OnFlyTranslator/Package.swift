@@ -2,34 +2,34 @@
 import PackageDescription
 
 let package = Package(
-    name: "TranslatorApp",
+    name: "OnFlyTranslator",
     platforms: [
         .macOS(.v13)
     ],
     products: [
-        .executable(name: "TranslatorApp", targets: ["TranslatorApp"]),
-        .library(name: "TranslatorLib", type: .dynamic, targets: ["TranslatorLib"])
+        .executable(name: "OnFlyTranslator", targets: ["OnFlyTranslator"]),
+        .library(name: "OnFlyTranslatorLib", type: .dynamic, targets: ["OnFlyTranslatorLib"])
     ],
     targets: [
         // The main executable
         .executableTarget(
-            name: "TranslatorApp",
-            dependencies: ["TranslatorLib"],
+            name: "OnFlyTranslator",
+            dependencies: ["OnFlyTranslatorLib"],
             path: "Sources",
             exclude: ["GoogleGeminiService.swift", "InputMonitor.swift", "Logger.swift"], // Dummy replacement to trigger view_file.
             sources: ["main.swift", "AppDelegate.swift"] // Executable specific
         ),
         // The library containing logic (easier to test)
         .target(
-            name: "TranslatorLib",
+            name: "OnFlyTranslatorLib",
             path: "Sources",
             exclude: ["main.swift", "AppDelegate.swift"], // Library logic
             sources: ["GoogleGeminiService.swift", "InputMonitor.swift", "Logger.swift"]
         ),
         // The tests
         .testTarget(
-            name: "TranslatorTests",
-            dependencies: ["TranslatorLib"],
+            name: "OnFlyTranslatorTests",
+            dependencies: ["OnFlyTranslatorLib"],
             path: "Tests",
             linkerSettings: [
                 .linkedFramework("XCTest")

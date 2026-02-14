@@ -8,7 +8,7 @@ echo "Building Tests..."
 
 cat > Tests/LinuxMain.swift <<EOF
 import XCTest
-@testable import TranslatorAppTests
+@testable import OnFlyTranslatorTests
 
 // Manual registering might be needed depending on Swift version, 
 // but let's try just running the bundle or creating a executable that imports XCTest.
@@ -44,11 +44,11 @@ swiftc \
     Sources/Logger.swift \
     Tests/GoogleGeminiServiceTests.swift \
     Tests/RunTests.swift \
-    -o Tests/TranslatorTests
+    -o Tests/OnFlyTranslatorTests
 
 if [ $? -eq 0 ]; then
     echo "Running Tests..."
-    ./Tests/TranslatorTests
+    ./Tests/OnFlyTranslatorTests
 else
     echo "Compilation Failed"
     exit 1

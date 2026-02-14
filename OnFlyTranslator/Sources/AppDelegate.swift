@@ -59,7 +59,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, InputMonitor
             DispatchQueue.main.async {
                 let alert = NSAlert()
                 alert.messageText = "Permission Required"
-                alert.informativeText = "TranslatorApp needs Accessibility permissions to Copy & Paste text.\n\n1. Open System Settings > Privacy & Security > Accessibility.\n2. Enable 'TranslatorApp'.\n3. Relaunch the app."
+                alert.informativeText = "OnFlyTranslator needs Accessibility permissions to Copy & Paste text.\n\n1. Open System Settings > Privacy & Security > Accessibility.\n2. Enable 'OnFlyTranslator'.\n3. Relaunch the app."
                 alert.alertStyle = .critical
                 alert.addButton(withTitle: "Open Settings")
                 alert.addButton(withTitle: "Quit")
@@ -162,7 +162,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, InputMonitor
             alert.addButton(withTitle: btn)
         }
         
-        // Ensure TranslatorApp is active to show the alert
+        // Ensure OnFlyTranslator is active to show the alert
         NSApp.activate(ignoringOtherApps: true)
         alert.layout()
         alert.window.level = .floating
@@ -241,7 +241,7 @@ class AppDelegate: NSObject, NSApplicationDelegate, NSMenuDelegate, InputMonitor
             
         } else {
             alert.messageText = "Permissions Denied"
-            alert.informativeText = "Permission is still missing.\n1. Open System Settings > Privacy > Input Monitoring.\n2. Toggle TranslatorApp ON (or remove and re-add)."
+            alert.informativeText = "Permission is still missing.\n1. Open System Settings > Privacy > Input Monitoring.\n2. Toggle OnFlyTranslator ON (or remove and re-add)."
             alert.addButton(withTitle: "Open Settings")
         }
         
