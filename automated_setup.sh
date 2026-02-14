@@ -7,7 +7,7 @@ echo "=== Automating Permission Setup ==="
 
 # 1. Kill App
 echo "1. Closing App..."
-pkill -9 OnFlyTranslator
+pkill -9 on-fly-translator
 
 # 2. Reset Permissions
 echo "2. Resetting Permissions for ${BUNDLE_ID}..."
@@ -26,7 +26,7 @@ open -R "${APP_PATH}"
 echo ""
 echo "!!! ACTION REQUIRED !!!"
 echo "---------------------------------------------------"
-echo "1. Drag 'OnFlyTranslator' from the FINDER window..."
+echo "1. Drag 'on-fly-translator' from the FINDER window..."
 echo "2. ...into the SYSTEM SETTINGS window list."
 echo "3. Make sure the toggle is ON."
 echo "---------------------------------------------------"
