@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>CFBundleIdentifier</key>
-    <string>com.user.OnFlyTranslator</string>
+    <string>com.user.on-fly-translator</string>
     <key>CFBundleName</key>
-    <string>OnFlyTranslator</string>
+    <string>on-fly-translator</string>
     <key>LSUIElement</key>
     <true/>
     <key>NSPrincipalClass</key>

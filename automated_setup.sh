@@ -1,7 +1,7 @@
 #!/bin/bash
 
-APP_PATH="$(pwd)/OnFlyTranslator/build/OnFlyTranslator.app"
-BUNDLE_ID="com.user.OnFlyTranslator"
+APP_PATH="$(pwd)/build/on-fly-translator.app"
+BUNDLE_ID="com.user.on-fly-translator"
 
 echo "=== Automating Permission Setup ==="
 
